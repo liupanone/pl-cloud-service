@@ -9,9 +9,9 @@
         <relativePath>../../pl-cloud-service/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.pl</groupId>
-    <artifactId>pl-eureka-server</artifactId>
+    <artifactId>pl-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>pl-eureka-server</name>
+    <name>pl-common</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -25,21 +25,11 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.73</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.pl</groupId>
-            <artifactId>pl-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -51,6 +41,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -58,6 +49,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
             </plugin>
         </plugins>
     </build>
