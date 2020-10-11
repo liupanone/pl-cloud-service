@@ -17,28 +17,35 @@
     </parent>
 
     <modules>
-        <module>pl-eureka-server</module>
         <module>pl-common</module>
+        <module>pl-eureka-server</module>
+        <module>pl-eureka-client</module>
     </modules>
 
     <properties>
-
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <spring.starter.web.version>2.3.4.RELEASE</spring.starter.web.version>
     </properties>
 
 
-<!--    <dependencies>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-web</artifactId>-->
-<!--        </dependency>-->
-<!--    </dependencies>-->
+    <dependencies>
+
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.3.4.RELEASE</version>
+                <version>${spring.starter.web.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

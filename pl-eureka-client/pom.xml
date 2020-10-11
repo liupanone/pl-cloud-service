@@ -9,9 +9,9 @@
         <relativePath>../../pl-cloud-service/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.pl</groupId>
-    <artifactId>pl-eureka-server</artifactId>
+    <artifactId>pl-eureka-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>pl-eureka-server</name>
+    <name>pl-eureka-client</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,14 +30,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.pl</groupId>
-            <artifactId>pl-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <dependency>
